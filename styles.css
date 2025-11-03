@@ -1,0 +1,344 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F1E9D8;
+}
+
+*{
+    
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    
+}
+h2{
+    text-align: center;
+    padding-right: 600px;
+}
+h3{
+    text-align: center;
+}
+
+header {
+    
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #F1E9D8;
+}
+
+
+.bookstore-container{
+    max-width: 1224px;
+    width: 92%;
+    margin: 0 auto;
+  }
+
+.bookshop-logo {
+    width: 210px;
+    height: auto;
+    float: left;
+    border-radius: 30px;
+    margin-right: 0px;
+    
+}
+
+.navigation-bar{
+    min-width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-menu {
+    list-style-type: none;
+    gap: 60px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item{
+
+    
+    padding-left: 100px;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+.nav-link{
+    transition: 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #E9B116;
+    text-decoration: underline;
+}
+
+.hamburger-menu{
+    display:none;
+    cursor: pointer;
+
+}
+
+.bar{
+    display:block;
+    width:25px;
+    height:3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.welcome-image{
+    
+    
+   
+    background-position: center;
+    left:auto;
+    right: auto;
+    height: 800px;
+    width:  99%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 100px;
+    
+    border-radius: 20px;
+
+    
+    
+    
+}
+
+.welcome-image.down{
+    margin-top:100px;
+}
+
+.welcome-page{
+    position:relative;
+    text-align: center;
+    
+
+}
+
+.welcome-txt{
+    
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.book-cover{
+    height: auto;
+    width: 300px;
+    padding-left: 3%;
+    margin-top: 30px;
+}
+.book {
+    width: 45%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-info {
+    text-align:justify;
+}
+
+
+@media screen and (max-width: 1061px) {
+    body {
+        font-size: 1.5rem; 
+    }
+
+    .nav-item{
+        margin-left: 10px; 
+        padding-left: 100px;
+    }
+
+    .book {
+        width: 100%;
+    }
+    .hamburger-menu {
+        display: block;
+        
+    }
+
+    .nav-menu{
+        position: fixed; 
+        left: 0;
+        top: 137px;
+        background-color: #F1E9D8;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        display: none;
+        z-index: 999; 
+      }
+
+    .nav-menu.active {
+        display: block;
+    }
+    .nav-item{
+        margin: 16px 0;
+      }
+    
+
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+}
+
+@media screen and (max-width: 1410px) {
+    .nav-menu {
+        font-size: 1.5rem; 
+        
+    }
+
+    .bookshop-logo{
+        width: 200px;
+    }
+
+    nav ul li {
+        
+        padding-left: 240px;
+    }
+}
+
+
+.scrolling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height:170px;
+    transition: 0.3s;
+}
+.scrolling .bookshop-logo {
+    width: 150px;
+    height: auto; 
+}
+
+.pay-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #003140;
+    color:  #ffffff;
+
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.pay-button:hover {
+    background-color: #0a93bd;
+}
+
+.container{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.container form{
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 50px;
+   
+}
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(50deg, #EC7560, #003240);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+
+
+
+
+
+
+
